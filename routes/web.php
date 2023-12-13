@@ -2,8 +2,6 @@
   
 use Illuminate\Support\Facades\Route;
   
-use App\Http\Controllers\ImageController;
-  
 /* 
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,12 +12,9 @@ use App\Http\Controllers\ImageController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-  
-Route::controller(ImageController::class)->group(function(){
-    Route::get('image-upload', 'index');
-    Route::post('image-upload', 'store')->name('image.store');
-});
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::view('/example-app','flutter');
